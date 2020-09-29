@@ -147,7 +147,7 @@ dim(cross_train)
 * Trains the model with vary methods (will choose later)  
 ```{r, echo=FALSE, cache=TRUE}
 available_algorithms = c('gbm', 'rf')
-my_algorithm = available_algorithms[1]
+my_algorithm = available_algorithms[2]
 fit_model <- train(labels ~ ., method=my_algorithm, data=cross_train)
 ```
   
@@ -162,7 +162,9 @@ accuracy <- sum((prediction == cross_test$label)) / length(cross_test$label)
 print(paste('Accuracy is:', accuracy))
 ```
   
-The accuracy is just 80% for the gbm, I will try with random forest later  
+The accuracy is just 80% for the gbm, I will try with random forest later.  
+With the RF, the result is 97%, that's high!  
+Btw with the random forest I got 95% score.  
   
 * Just for easier visualization, I parse the output into a csv file  
 ```{r, cache=TRUE}
