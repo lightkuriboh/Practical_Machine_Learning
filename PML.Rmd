@@ -2,11 +2,14 @@
 title: "Practical Machine Learning course"
 author: "kuriboh"
 date: "9/28/2020"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
 ```
 
 ## Abstract  
@@ -142,7 +145,7 @@ dim(cross_train)
 ```
   
 * Trains the model with vary methods (will choose later)  
-```{r, echo=FALSE}
+```{r, echo=FALSEm cache=TRUE}
 available_algorithms = c('gbm', 'rf')
 my_algorithm = available_algorithms[1]
 fit_model <- train(labels ~ ., method=my_algorithm, data=cross_train)
