@@ -3,9 +3,9 @@ title: "Practical Machine Learning course"
 author: "kuriboh"
 date: "9/28/2020"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
